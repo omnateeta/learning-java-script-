@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fetch Data from JSONPlaceholder</title>
+</head>
+<body>
+<h2>Fetch Data</h2>
+<button onclick="fetchData()">Fetch Data</button>
+<div id="output"></div>
+<script>
+function fetchData() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+  // Event handler for successful response
+  xhr.onload = function() {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      var responseData = JSON.parse(xhr.responseText);
+      document.getElementById('output').innerText = JSON.stringify(responseData,null,2);
+    } else {
+      document.getElementById('output').innerText = 'Error fetching data';
+    }
+  };
+  // Event handler for error
+  xhr.onerror = function() {
+    document.getElementById('output').innerText = 'Error fetching data';
+  };
+  // Send the request
+  xhr.send();
+  // Update UI to indicate loading
+  document.getElementById('output').innerText = 'Loading...';
+  console.log("request is being processed!!!")
+}
+</script>
+</body>
+</html>
