@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA Script 6</title>
+</head>
+<body>
+   <script>
+    function hello()
+    {
+    if(true) 
+    {
+      var _name="Hello from my side "
+      console.log(_name)
+    }
+    console.log(_name)
+    }
+    hello()
+    // using let 
+    function world()
+    {
+    if(true) 
+    {
+      let _exp2="This is about let "
+      console.log(_exp2)
+    }
+    console.log(_exp2)
+    }
+    world() //this sentance will not exicut in consol, it shows error because in function we declare as let/
+   </script> 
+</body>
+</html>
