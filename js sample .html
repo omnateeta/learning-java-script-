@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read Text File Using AJAX</title>
+</head>
+<body>
+<h2>Read Text File</h2>
+<button onclick="readFile()">Read File</button>
+<div id="output"></div>
+<script>
+function readFile() {
+  // Declare and initialize xhr variable
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'sample1.txt', true);
+  // Event handler for successful response
+  xhr.onload = function() {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      document.getElementById('output').innerText = xhr.responseText;
+    } else {
+      document.getElementById('output').innerText = 'Error reading file';
+    }
+  };
+  // Event handler for error
+  xhr.onerror = function() {
+    document.getElementById('output').innerText = 'Error fetching file';
+  };
+  // Send the request
+  xhr.send();
+  console.log("request is being processed")
+}
+</script>
+</body>
+</html>
