@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student score card</title>
+    <style>
+        fieldset{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hey.. welcome to you</h2>
+    <p>This web page about to calculate students obtained mars and finding average about it.</p>
+    <p>Here i used java script code to calculate the enterd marks and also basic html and css.</p><br><hr>
+    <form>
+        <fieldset>
+            <legend>Score card</legend>
+            Roll Number: <input type="number" name="" id="rnum"><br><br>
+            Student name: <input type="text" name="" id="name"><br><br>
+            <big>Enter your obtained marks</big><br><br>
+            Physics : <input type="number" name="" id="phy"><br><br>
+            Chemistry : <input type="number" name="" id="chem"><br><br>
+            Mathematics : <input type="number" name="" id="math"><br><br>
+            Biology : <input type="number" name="" id="bio"><br><br>
+
+            <button type="button" onclick="total()">Total</button> 
+            <button type="button" onclick="average()">Average</button>
+
+        </fieldset>
+        <h1 id="total"></h1>
+        <h1 id="average"></h1>
+
+     
+
+    </form>
+<script src="js score.js"></script>
+</body>
+</html>
