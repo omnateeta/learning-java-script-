@@ -1,0 +1,206 @@
+ <head>
+    <title>Hello Page</title>
+ </head>
+ <body>
+    <h3>Welcome to java script tutorial</h3>
+    <p id="p1">paragraph 1</p>
+    <p id="p2">paragraph 2</p>
+    <p id="p3">paragraph 3</p>
+    <p id="p4">paragraph 4</p>
+    <p id="p5">paragraph 5</p>
+    <p id="p6">paragraph 6</p>
+    <p id="p7">paragraph 7</p>
+    <p>--operators in java script</p>
+    <p id="op1">Addition</p>
+    <p id="op2">Sbtractor</p>
+    <p id="op3">Muliplacation</p>
+    <p id="op4">divider0</p>
+    <p id="op5">modulus</p>
+    <p id="op6">inncrement</p>
+    <p>--Assignment operator</p>
+    <p id="ap1">paragraph 1</p>
+    <p id="ap2">paragraph 2</p>
+    <p id="ap3">paragraph 3</p>
+    <p id="ap4">paragraph 4</p>
+    <p id="ap5">paragraph 5</p>
+    <p id="ap6">paragraph 6</p>
+    <p id="ap7">paragraph 7</p>
+    <b>--Comparision operator</b>
+    <p id="cp1">paragraph 1</p>
+    <p id="cp2">paragraph 2</p>
+    <p id="cp3">paragraph 3</p>
+    <p id="cp4">paragraph 4</p>
+    <p id="cp5">paragraph 5</p>
+    <p id="cp6">paragraph 6</p>
+    <p id="cp7">paragraph 7</p>
+    <!--conditional operator-->
+    <b>If else check</b>
+    <p id="else">paragraph</p>
+    <b>Switch check</b>
+    <p id="switch">paragraph for switch</p>
+
+    <script>
+        //comment
+       /* document.write("Hello; world java script")
+        alert("Hello world");*/
+        console.log("helloooo consol");
+        //js is case sensitive
+        var s=10;
+        //dynamic type determination
+        var id=10;
+        console.log("type is",typeof id," and value is ",id);
+        id ="abc"
+        console.log("Type is",typeof id,"abd value is",id);
+        id =98.5
+        console.log("Type is",typeof id,"abd value is",id);
+
+        //var vs constant
+        const cv=10;
+        vc=11;
+        console.log("Type is",typeof cv,"and value is",cv)
+
+        //global vs local
+        var counter=999;
+            //global vs loca
+            {
+                let counter=10;
+                console.log("inside the block counter value=",counter);
+            }
+            console.log(counter);
+            console.log("outside the block counter=",counter);
+
+            //primitive data types
+            var a=10;
+            var b=20.5;
+            var c="abs";
+            var d=true;
+            var e;
+            var f=Symbol.for("ravi");//number-symbol-unique used for Ids
+
+            console.log("value of a is",a,"and type of a is",typeof a);
+            console.log("value of b is",b,"and type of b is",typeof b);
+            console.log("value of c is",c,"and type of c is",typeof c);
+            console.log("value of d is",d,"and type of d is",typeof d);
+            console.log("value of e is",e,"and type of e is",typeof e);
+            console.log("value of f is",f,"and type of f is",typeof f);
+
+            //Arrays in js
+            const fruits=["apple","banana","grapes"];
+            document.getElementById("p1").innerHTML=fruits;
+
+            fruits[1]="wattermillion";
+            document.getElementById("p2").innerHTML=fruits;
+
+            fruits.push("sebu","papaya");
+            document.getElementById("p3").innerHTML="Array with new elements"+fruits;
+
+            fruits.pop();
+            document.getElementById("p4").innerHTML="Array with elemets droped"+fruits;
+
+            for(let i=0;i<fruits.length;i++)
+            fruits[i]=Math.floor((Math.random()*100));
+            
+            document.getElementById("p5").innerHTML="Before sorting array is"+fruits;
+
+            fruits.sort();
+            document.getElementById("p6").innerHTML="After sorting array is"+fruits;
+
+            const fruitsarr=new Array("apple,mango,srawberry");
+            document.getElementById("p7").innerHTML="Another way of Array definition is"+fruitsarr;
+
+            <!--operators in java script-->
+            var n=10;
+            var m=2;
+            document.getElementById("op1").innerHTML=n+m;
+            document.getElementById("op2").innerHTML=n-m;
+            document.getElementById("op3").innerHTML=n*m;
+            document.getElementById("op4").innerHTML=n/m;
+            document.getElementById("op5").innerHTML=n%m;
+            document.getElementById("op6").innerHTML=n++;
+            /*assignment +=, -=, *=, /=, %=,**=,Bitwise;*/
+            p=10;
+            p+=2;
+            document.getElementById("ap1").innerHTML=p;
+            p-=2;
+            document.getElementById("ap2").innerHTML=p;
+            p*=2
+            document.getElementById("ap3").innerHTML=p;
+            p/=2;
+            document.getElementById("ap4").innerHTML=p;
+            p%=2;
+            document.getElementById("ap5").innerHTML=p;
+            p**=2;
+            document.getElementById("ap6").innerHTML=p;
+
+            k=8;
+            k|=8;
+            document.getElementById("ap7").innerHTML=k;
+
+            /*Comparision operator*/
+            var n1=999;
+            var n2=777;
+            document.getElementById("cp1").innerHTML=n1>n2;
+            document.getElementById("cp2").innerHTML=n1<n2;
+            document.getElementById("cp3").innerHTML=n1==n2;
+            document.getElementById("cp4").innerHTML=n1<=n2;
+            document.getElementById("cp5").innerHTML=n1>=n2;
+            document.getElementById("cp6").innerHTML=(n1>n2)&&(n1>1000);
+            document.getElementById("cp7").innerHTML=(n1>n2)||(n1>1000);
+
+            /*Conditional operator*/
+            //If else
+            var salary=75225;
+            if(salary>50000)
+            {
+                document.getElementById("else").innerHTML="Good Salary";
+            }
+                else if(salary>20000)
+            {
+                document.getElementById("else").innerHTML="Average salary";
+            }
+                else
+            {
+                document.getElementById("else").innerHTML="Not Bad";
+            }
+
+            //switch
+            var s1="F ";
+            switch(s1)
+            {
+                case "M":
+                case "m":    
+                document.getElementById("switch").innerHTML="Male";
+                break;
+                case "F":
+                case "f":
+                document.getElementById("switch").innerHTML="Female";
+                break;
+                default:document.getElementById("switch").innerHTML="Not specific";
+            }
+
+            //for looping
+            var fruitsloop=["apple","Mango","grapes","wattermillion","sapota"];
+            console.log("For looping ");
+            for(let i=0;i<=fruitsloop.length;i++)
+            {
+                console.log("element of "+i+"="+fruitsloop[i]);
+            }
+            console.log("While looping");
+            //whlile loop
+            var ele=0;
+            while(ele<fruitsloop.length)
+            {
+                console.log("element "+ele+"="+fruitsloop[ele]);
+                ++ele;
+            }
+
+            //itribles
+            for(ele of fruitsloop)
+            {
+                console.log(ele)
+            }
+             
+    </script> 
+    <!--Arrays in js-->
+    
+</body>
