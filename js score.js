@@ -1,4 +1,4 @@
-
+//score jaca script file 
 function total()
 {
     var a=document.getElementById("phy").value
