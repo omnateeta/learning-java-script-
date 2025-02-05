@@ -153,3 +153,39 @@ html = `
 `;
 document.body.innerHTML = html;
 */
+
+
+// Templeate Literals
+/*
+const name = "John";
+const age = 30;
+const job = "Developer";
+const city = "New York";
+
+let html;
+//without using templete literals we are going to reandering javascript to html
+html=
+"<ul><li>Name:"+
+name + 
+"</li><li>Age:"+
+age+
+"</li><li>Job:"+
+job+
+"</li><li>"+
+city+
+"</li></ul>";
+document.body.innerHTML=html;
+
+
+//With using Templete literals(es6)
+
+html = `
+<ul>
+<li>Name:${name}</li>
+<li>Age:${age}</li>
+<li>Job:${job}</li>
+<li>${city}</li>
+</ul>
+`;
+document.body.innerHTML = html;
+*/
