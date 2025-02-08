@@ -1,3 +1,4 @@
+Here all code are in comments to check, one by one comment line remove and check out the concepts..
 /*
 const firstname = "omnateeta";
 const lastname = "Unnimath";
