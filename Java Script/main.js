@@ -1,3 +1,4 @@
+//these can be checked in console page in webpage
 let val;
 // val = document;
 // val = document.all;
