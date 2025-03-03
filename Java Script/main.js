@@ -1,4 +1,4 @@
-//these can be checked in console page in webpage
+//these can be checked in console page in webpage(All are in the comment lines have to check one by one)
 let val;
 // val = document;
 // val = document.all;
